@@ -28,6 +28,16 @@ class _NewExpenseState extends State<NewExpense> {
     });
   }
 
+  void _sumbitExpenseData() {
+    final enteredAmount = double.tryParse(_amountController.text);
+    final amountIsInvaild = enteredAmount == null || enteredAmount <= 0;
+    if (_titleController.text.trim().isEmpty ||
+        amountIsInvaild ||
+        _selectedDate == null) {
+      // show error message
+    }
+  }
+
   @override
   void dispose() {
     _titleController.dispose();
@@ -112,10 +122,7 @@ class _NewExpenseState extends State<NewExpense> {
                 child: const Text('Cancel'),
               ),
               ElevatedButton(
-                onPressed: () {
-                  // debugPrint(_titleController.text);
-                  // debugPrint(_amountController.text);
-                },
+                onPressed: _sumbitExpenseData,
                 child: const Text('Save Expense'),
               )
             ],
