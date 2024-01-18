@@ -22,12 +22,13 @@ class _ExpensesState extends State<Expenses> {
       title: 'Cinema',
       amount: 15.69,
       date: DateTime.now(),
-      category: Category.leisure,
+      category: Category.leisure,  
     )
   ];
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(
         onAddExpense: _addExpense,
