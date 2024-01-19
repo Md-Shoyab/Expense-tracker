@@ -12,7 +12,12 @@ class ExpensesList extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       itemCount: expenses.length,
-      itemBuilder: (ctx, index) => ExpenseItem(expense: expenses[index]),
+      itemBuilder: (ctx, index) => Dismissible(
+        key: ValueKey(expenses[index]),
+        child: ExpenseItem(
+          expense: expenses[index],
+        ),
+      ),
     );
   }
 }
