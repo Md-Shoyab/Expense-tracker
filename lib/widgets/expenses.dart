@@ -22,7 +22,7 @@ class _ExpensesState extends State<Expenses> {
       title: 'Cinema',
       amount: 15.69,
       date: DateTime.now(),
-      category: Category.leisure,  
+      category: Category.leisure,
     )
   ];
 
@@ -42,6 +42,12 @@ class _ExpensesState extends State<Expenses> {
     });
   }
 
+  void _removeExpense(Expense expense) {
+    setState(() {
+      _registeredExpenses.remove(expense);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +64,10 @@ class _ExpensesState extends State<Expenses> {
       body: Column(
         children: [
           const Text('Expenses Chart'),
-          ExpensesList(expenses: _registeredExpenses),
+          ExpensesList(
+            expenses: _registeredExpenses,
+            onRemoveExpense: _removeExpense,
+          ),
         ],
       ),
     );
