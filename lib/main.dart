@@ -6,6 +6,7 @@ var kColorScheme = ColorScheme.fromSeed(
 );
 
 var kDarkColorScheme = ColorScheme.fromSeed(
+  brightness: Brightness.dark,
   seedColor: const Color.fromARGB(255, 5, 99, 125),
 );
 
@@ -15,10 +16,22 @@ void main() {
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: kDarkColorScheme,
         cardTheme: const CardTheme().copyWith(
-          color: kColorScheme.secondaryContainer,
+          color: kDarkColorScheme.secondaryContainer,
           margin: const EdgeInsets.symmetric(
             horizontal: 16.0,
             vertical: 8.0,
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: kDarkColorScheme.primaryContainer,
+              foregroundColor: kDarkColorScheme.onPrimaryContainer),
+        ),
+        textTheme: const TextTheme().copyWith(
+          titleLarge: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: kDarkColorScheme.onSecondaryContainer,
+            fontSize: 16.0,
           ),
         ),
       ),
@@ -42,13 +55,13 @@ void main() {
         ),
         textTheme: const TextTheme().copyWith(
           titleLarge: TextStyle(
-            fontWeight: FontWeight.normal,
+            fontWeight: FontWeight.bold,
             color: kColorScheme.onSecondaryContainer,
-            fontSize: 14.0,
+            fontSize: 16.0,
           ),
         ),
       ),
-      themeMode: ThemeMode.system,
+      // themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: const Expenses(),
     ),
