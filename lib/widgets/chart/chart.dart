@@ -1,7 +1,6 @@
-import 'package:expense_tracker/models/expense.dart';
-import 'package:expense_tracker/widgets/chartBar.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import '../../models/expense.dart';
+import 'chart_bar.dart';
 
 class Chart extends StatelessWidget {
   const Chart({
@@ -36,13 +35,13 @@ class Chart extends StatelessWidget {
     final isDarkMode =
         MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Container(
-      margin: EdgeInsets.all(16),
-      padding: EdgeInsets.symmetric(
-        horizontal: 4.w,
-        vertical: 2.h,
+      margin: const EdgeInsets.all(16),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 4.0,
+        vertical: 2.0,
       ),
       width: double.infinity,
-      height: 20.h,
+      height: 20.0,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -68,16 +67,16 @@ class Chart extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 1.h,
+          const SizedBox(
+            height: 1.0,
           ),
           Row(
             children: buckets
                 .map(
                   (bucket) => Expanded(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 2.w,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 2.0,
                       ),
                       child: Icon(
                         CategoryIcons[bucket.category],
