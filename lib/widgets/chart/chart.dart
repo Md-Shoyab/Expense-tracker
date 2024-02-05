@@ -68,7 +68,7 @@ class Chart extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 1.0,
+            height: 1.0
           ),
           Row(
             children: buckets
