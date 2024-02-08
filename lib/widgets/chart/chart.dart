@@ -67,9 +67,7 @@ class Chart extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 1.0
-          ),
+          const SizedBox(height: 1.0),
           Row(
             children: buckets
                 .map(
@@ -79,7 +77,7 @@ class Chart extends StatelessWidget {
                         horizontal: 2.0,
                       ),
                       child: Icon(
-                        CategoryIcons[bucket.category],
+                        categoryIcons[bucket.category],
                         color: isDarkMode
                             ? Theme.of(context).colorScheme.secondary
                             : Theme.of(context)
