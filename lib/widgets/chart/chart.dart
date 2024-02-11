@@ -41,7 +41,7 @@ class Chart extends StatelessWidget {
         vertical: 2.0,
       ),
       width: double.infinity,
-      height: 20.0,
+      height: 180.0,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
