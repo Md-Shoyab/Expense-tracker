@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../models/expense.dart';
 import 'chart_bar.dart';
+import '../../models/expense.dart';
 
 class Chart extends StatelessWidget {
   const Chart({
@@ -20,7 +20,7 @@ class Chart extends StatelessWidget {
   }
 
   double get maxTotalExpense {
-    double maxTotalExpense = 0;
+    double maxTotalExpense = 0.0;
 
     for (final bucket in buckets) {
       if (bucket.totalExpenses > maxTotalExpense) {
