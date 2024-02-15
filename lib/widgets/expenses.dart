@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/expense.dart';
 import 'chart/chart.dart';
+import '../models/expense.dart';
 import 'expenses_list/expenses_list.dart';
 import 'expenses_list/new_expense.dart';
 
