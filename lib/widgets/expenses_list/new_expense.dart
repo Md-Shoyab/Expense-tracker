@@ -127,6 +127,7 @@ class _NewExpenseState extends State<NewExpense> {
                         value: category,
                         child: Text(
                           category.name.toUpperCase(),
+                          style: const TextStyle(color: Colors.black),
                         ),
                       ),
                     )
