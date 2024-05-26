@@ -33,6 +33,14 @@ void main() {
             color: kDarkColorScheme.onSecondaryContainer,
             fontSize: 16.0,
           ),
+          labelMedium: TextStyle(
+            color: kDarkColorScheme.onSecondaryContainer,
+            fontSize: 14.0,
+          ),
+          labelSmall: TextStyle(
+            color: kDarkColorScheme.onSecondaryContainer,
+            fontSize: 12.0,
+          ),
         ),
       ),
       theme: ThemeData().copyWith(
@@ -59,9 +67,17 @@ void main() {
             color: kColorScheme.onSecondaryContainer,
             fontSize: 16.0,
           ),
+          labelMedium: TextStyle(
+            color: kColorScheme.onSecondaryContainer,
+            fontSize: 14.0,
+          ),
+          labelSmall: TextStyle(
+            color: kColorScheme.onSecondaryContainer,
+            fontSize: 12.0,
+          ),
         ),
       ),
-       themeMode: ThemeMode.system,
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: const Expenses(),
     ),

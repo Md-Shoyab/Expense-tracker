@@ -81,6 +81,7 @@ class _NewExpenseState extends State<NewExpense> {
           TextField(
             controller: _titleController,
             maxLength: 50,
+            style: Theme.of(context).textTheme.labelMedium,
             decoration: const InputDecoration(
               label: Text('Title'),
             ),
@@ -91,6 +92,7 @@ class _NewExpenseState extends State<NewExpense> {
                 child: TextField(
                   controller: _amountController,
                   keyboardType: TextInputType.number,
+                  style: Theme.of(context).textTheme.labelMedium,
                   decoration: const InputDecoration(
                     prefixText: '\$',
                     label: Text('Amount'),
@@ -107,6 +109,7 @@ class _NewExpenseState extends State<NewExpense> {
                       _selectedDate == null
                           ? 'No Date Selected'
                           : formatter.format(_selectedDate!),
+                      style: Theme.of(context).textTheme.labelSmall,
                     ),
                     IconButton(
                       onPressed: _presentDatePicker,
@@ -127,7 +130,7 @@ class _NewExpenseState extends State<NewExpense> {
                         value: category,
                         child: Text(
                           category.name.toUpperCase(),
-                          style: const TextStyle(color: Colors.black),
+                          style: Theme.of(context).textTheme.labelMedium,
                         ),
                       ),
                     )
